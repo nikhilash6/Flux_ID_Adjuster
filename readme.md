@@ -20,7 +20,7 @@ The default values are fixed for the best result but I have only tested it for l
 | **`face_isolation_strictness`** | `1.0` | Top % of tokens to lock as the "Face". Set to 1.0, when using the tight face crop, to pull the full body/background. Lower values (e.g., 0.35) isolate just the face for hybrid generations. |
 | **`confidence_gate`** | `0.15` | Minimum confidence required to soft-pull a token. Higher values prevent visual artifacts but might freeze the render. 0.0 disables the safety gate. |
 | **`hard_anchor_margin`** | `0.06` | The margin of certainty required to permanently lock a token (like a pupil). Lower means anchors lock faster; higher requires absolute certainty. |
-| **`contrast_and_texture_floor`** | `0.18` | Base similarity cutoff. Increasing this boosts visual contrast and removes noise, but pushing too high creates waxy, over-smoothed skin. |
+| **`contrast_and_texture_floor`** | `0.25` | Base similarity cutoff. Increasing this boosts visual contrast and removes noise, but pushing too high creates waxy, over-smoothed skin. |
 | **`subject_mask`** *(Optional)* | `None` | Connect a mask here to restrict the Saliency Radar to only consider reference tokens inside the drawn area. |
 
 ### installation
@@ -29,6 +29,7 @@ git clone https://github.com/Magirad/Flux_ID_Adjuster.git
 (if you have git  installed or just create a new folder and copy the files)
 
 ### Important Tips
+* I have exclusively tested this on normal KSampler not on advance/ custom  KSampler.
 * Always remember to match your sampling steps to the KSampler steps to ensure proper anatomy.
 * For **photorealism**, keep `photorealistic_smoothing` turned on, and lower the `contrast_and_texture_floor` slightly around 0.18 - 0.20, which will add more natural noise.
 * For **anything artistic**, keep `photorealistic_smoothing` turned off, use the "Ease-In" curve and bump `background_text_strength` up slightly. For more contrast, increase the `contrast_and_texture_floor` slightly around 0.30+ but it will result in waxy skin.
