@@ -65,7 +65,7 @@ class FluxIDAutoAdjuster:
                     "tooltip": "The margin difference required to permanently lock a token (like a pupil). Lower means anchors lock faster; higher requires absolute certainty."
                 }),
                 "contrast_and_texture_floor": ("FLOAT", {
-                    "default": 0.18, "min": -1.0, "max": 1.0, "step": 0.01,
+                    "default": 0.25, "min": -1.0, "max": 1.0, "step": 0.01,
                     "tooltip": "Base similarity cutoff. Increasing this boosts visual contrast and removes noise, but pushing too high creates waxy, over-smoothed skin."
                 }),
             },
