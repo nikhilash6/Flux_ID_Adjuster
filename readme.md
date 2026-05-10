@@ -17,7 +17,7 @@ The default values are fixed for the best result but I have only tested it for l
 | **`dynamic_text_balancing`** | `TRUE` | Automatically throttles text strength when the face is struggling to form, preventing complex text prompts from crushing the facial identity. |
 | **`target_likeness_metric`** | `0.35` | The raw cosine goal. 0.35 is mathematically ideal for Flux. Pushing higher forces aggressive pulling; lower allows more stylistic freedom. |
 | **`soft_blend_k`** | `1` | Averages the top K matches for smooth skin. Committed anchors (eyes/lips) ignore this and snap exactly to K=1 for maximum sharpness. |
-| **`face_isolation_strictness`** | `1.0` | Top % of tokens to lock as the "Face". Set to 1.0 to pull the full body/background. Lower values (e.g., 0.35) isolate just the face for hybrid generations. |
+| **`face_isolation_strictness`** | `1.0` | Top % of tokens to lock as the "Face". Set to 1.0, when using the tight face crop, to pull the full body/background. Lower values (e.g., 0.35) isolate just the face for hybrid generations. |
 | **`confidence_gate`** | `0.15` | Minimum confidence required to soft-pull a token. Higher values prevent visual artifacts but might freeze the render. 0.0 disables the safety gate. |
 | **`hard_anchor_margin`** | `0.06` | The margin of certainty required to permanently lock a token (like a pupil). Lower means anchors lock faster; higher requires absolute certainty. |
 | **`contrast_and_texture_floor`** | `0.18` | Base similarity cutoff. Increasing this boosts visual contrast and removes noise, but pushing too high creates waxy, over-smoothed skin. |
