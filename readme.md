@@ -23,6 +23,11 @@ The default values are fixed for the best result but I have only tested it for l
 | **`contrast_and_texture_floor`** | `0.18` | Base similarity cutoff. Increasing this boosts visual contrast and removes noise, but pushing too high creates waxy, over-smoothed skin. |
 | **`subject_mask`** *(Optional)* | `None` | Connect a mask here to restrict the Saliency Radar to only consider reference tokens inside the drawn area. |
 
+### installation
+got to your  comfyui custom_nodes folder and use cmd to open windows command promt and type:  
+git clone https://github.com/Magirad/Flux_ID_Adjuster.git
+(if you have git  installed or just create a new folder and copy the files)
+
 ### Important Tips
 * Always remember to match your sampling steps to the KSampler steps to ensure proper anatomy.
 * For **photorealism**, keep `photorealistic_smoothing` turned on, and lower the `contrast_and_texture_floor` slightly around 0.18 - 0.20, which will add more natural noise.
