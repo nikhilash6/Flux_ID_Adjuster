@@ -44,3 +44,6 @@ This project uses the **PolyForm Noncommercial License 1.0.0**. The short versio
 
 **Looking to use this for business?**
 If you are a company or developer wanting to integrate this into a commercial product or paid service, we can set that up! Just open an issue on this GitHub repository or reach out via the contact info on my GitHub profile to arrange a separate commercial license.
+
+
+### special thanks to https://github.com/capitan01R as i got out of some tricky issues by using his logics.
